@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3 circle challenge</title>
+        <style>
+            .circle {
+                width: 130px;
+                height: 130px;
+                background-color: #000;
+                margin: 5px;
+                border-radius: 50%;
+
+            }
+
+            #main {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border: 2px solid red;
+                height: 400px;
+                justify-content: flex-start;
+            }
+
+            #red-circle {
+                background-color: red;
+
+            }
+
+            #blue-circle {
+                background-color: blue;
+
+            }
+
+            #yellow-circle {
+                background-color: yellow;
+
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                const elements = document.querySelectorAll('.circle');
+                console.log(elements); // elements.length
+                if (elements) {
+                    elements[0].onclick = function () {
+                        elements[0].style.display = "none";
+                    }
+                    elements[1].onclick = function () {
+                        elements[1].style.display = "none";
+                    }
+                    elements[2].onclick = function () {
+                        elements[2].style.display = "none";
+                    }
+                }
+                /*
+        // var , let , cont
+        const red = document.getElementById('red-circle');
+        if(red){
+        red.onclick = function() {
+         red.style.display ="none";     
+        }    
+        }
+       
+        const blue = document.getElementById('blue-circle');
+        if(blue){
+         blue.onclick = function() {
+         blue.style.display ="none";     
+        }    
+        }
+        const yellow = document.getElementById('yellow-circle');
+        if(yellow){
+            yellow.onclick = function() {
+            yellow.style.display ="none";     
+        }    
+        }
+        */
+            });
+        </script>
+    </head>
+
+    <body>
+
+        <div id="main">
+
+            <div class="circle" id="red-circle"></div>
+            <div class="circle" id="blue-circle"></div>
+            <div class="circle" id="yellow-circle"></div>
+        </div>
+
+    </body>
+
+</html>

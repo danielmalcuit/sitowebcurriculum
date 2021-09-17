@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How many fingers</title>
+    <style>
+        body{
+            background-color:#000;
+            color:#fff;
+        }
+        button {
+            border:1px solid #fff;
+            padding:5px;
+            border-radius: 5px;
+            min-width: 120px;
+            background-color:green;
+            color:#fff;
+        }
+        #quantity{
+            padding:5px;
+            border:1px solid green;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded',function(){
+             //
+            let guess = Math.floor(Math.random()*6);
+            const btn = document.getElementById('guess');
+                // '1'  ==  1 = true 
+                // '1' === 1 = false
+            btn.addEventListener('click', function(){
+
+                const quantity = document.getElementById('quantity');
+                     const q = quantity.value;
+                  
+                if(+q === guess){
+                     alert('Well done! You got it')
+                } else {
+                    alert('Nope!, The number was ' + guess);
+                  //  quantity.value = '';
+                   
+
+                }
+                guess = Math.floor(Math.random()*6);
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h1> How many fingers am I holding up</h1>
+    <form name="fingers">
+        <div class="form-group">
+            <input type="number" name="quantity" id="quantity" min="1" max="5">
+            <button type="button" id="guess">Guess!</button>
+        </div>
+    </form>
+</body>
+</html>
